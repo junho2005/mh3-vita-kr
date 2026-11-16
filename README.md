@@ -45,6 +45,14 @@ If you already have the game installed on your PS Vita:
    ```
 3. Launch the game.
 
+> [!IMPORTANT]
+> **Delete Compiled Language Cache (`.mh3lang`) when Updating Translations**:
+> When adding or updating custom language files (such as `template.json`), you **must delete the pre-compiled `.mh3lang` cache file** (e.g. `ko.mh3lang`) in the `languages` directory:
+> ```text
+> ux0:data/mh3-wii/languages/ko.mh3lang
+> ```
+> If the `.mh3lang` file exists, the game engine will bypass your updated JSON and load the old binary cache directly. Once deleted, the game will automatically recompile your JSON into a fresh `.mh3lang` file on startup.
+
 ---
 
 ## 📜 Credits & License
@@ -52,4 +60,3 @@ If you already have the game installed on your PS Vita:
 * Original Static Recompiler & PS Vita Port: [Grarak/mh3-wii](https://github.com/Grarak/mh3-wii)
 * License: [GNU General Public License v3.0 (GPL-3.0)](https://www.gnu.org/licenses/gpl-3.0.html)
 * **Disclaimer**: This project does not contain any copyrighted game assets, audio, textures, or proprietary Capcom ROM files. Users must supply their own game files extracted from a legally owned copy of the game.
-# mh3-vita-kr
